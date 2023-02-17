@@ -63,6 +63,14 @@ public class SpaDayController {
             }
         }
 
+        boolean nailFlipFlop = manipedi.equals("manicure");
+
+        model.addAttribute("name", name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("manipedi", manipedi);
+        model.addAttribute("appropriateFacials", appropriateFacials);
+        model.addAttribute("nailFlipFlop", nailFlipFlop);
+
         return "menu";
     }
 }
