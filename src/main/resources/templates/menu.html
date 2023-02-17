@@ -17,7 +17,7 @@
         <h2>Menu  of Available Services</h2>
         <br>
         <h3>Facial Treatments</h3>
-        <p>The facial treatments below are recommended by our estheticians for your given skin type.</p>
+        <p>The facial treatments below are recommended<br>by our estheticians for your given skin type.</p>
         <table>
             <th:block th:each="treatment : ${appropriateFacials}">
                 <tr>
@@ -27,11 +27,11 @@
         </table>
     </div>
     <div id = "servicesMenu">
-        <div th:if='${nailFlipFlop}'>
+        <div th:if="${manipedi.equals('manicure')} or ${manipedi.equals('both')}">
             <h3>Manicure</h3>
             <h3 th:replace="~{fragments :: manicureDescription}"></h3>
         </div>
-        <div th:unless='${nailFlipFlop}'>
+        <div th:if="${manipedi.equals('pedicure')} or ${manipedi.equals('both')}">
             <h3>Pedicure</h3>
             <h3 th:replace="~{fragments :: pedicureDescription}"></h3>
         </div>
